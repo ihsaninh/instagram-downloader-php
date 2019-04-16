@@ -15,11 +15,17 @@ class Instagram extends CI_Controller {
 
 	private function getApi($title, $viewUrl, $endpoint = 'ig_post.php') 
 	{
-		$data['title'] = $title;
-		$data['menu'] = $this->db->get('menu')->result_array();
 		$apiKey = 'Z6OIZrudRcWtEuScCI9Nc38qx';
 		$id = $this->input->post('id');
-		$data['response'] = $this->http_request('https://rest.farzain.com/api/'. $endpoint .'?id='. $id . '&apikey='. $apiKey);
+		$data = [
+			'title' => $title,
+			'menu' => [
+				['menu_name' => 'Instagram Photos Downloader', 'url' => ''],
+				['menu_name' => 'Instagram Videos Downloader', 'url' => 'instagramvideodownloader'],
+				['menu_name' => 'Instagram Stories Downloader', 'url' => 'instagramstoriesdownloader'] 
+			],
+			'response' => $this->http_request('https://rest.farzain.com/api/'. $endpoint .'?id='. $id . '&apikey='. $apiKey)
+		];
 		$this->load->view('templates/header',$data);
 		$this->load->view('instagram/'. $viewUrl, $data);
 		$this->load->view('templates/footer');
