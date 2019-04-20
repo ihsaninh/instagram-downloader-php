@@ -1,22 +1,29 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
+use GuzzleHttp\Client;
+
 class Instagram extends CI_Controller {
 
-	private function http_request($url)
+	private function guzzleRequest($endPoint)
 	{
-		$ch = curl_init(); 
-		curl_setopt($ch, CURLOPT_URL, $url);
-		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
-		$output = curl_exec($ch); 
-		curl_close($ch);      
-		return json_decode($output, TRUE);
+		$client = new Client();
+		try {
+			$response = $client->request('GET', 'https://rest.farzain.com/api/'. $endPoint, [
+				'query' => [
+					'apikey' => 'Z6OIZrudRcWtEuScCI9Nc38qx',
+					'id' => $this->input->post('id')
+				]
+			]);
+
+			$result = json_decode($response->getBody()->getContents(), true);
+			return $result;	
+
+		} catch (ConnectException $e) {	}
 	}
 
-	private function getApi($title, $viewUrl, $endpoint = 'ig_post.php') 
+	private function getResponse($title, $viewUrl, $endPoint = 'ig_post.php') 
 	{
-		$apiKey = 'Z6OIZrudRcWtEuScCI9Nc38qx';
-		$id = $this->input->post('id');
 		$data = [
 			'title' => $title,
 			'menu' => [
@@ -24,7 +31,7 @@ class Instagram extends CI_Controller {
 				['menu_name' => 'Instagram Videos Downloader', 'url' => 'instagramvideodownloader'],
 				['menu_name' => 'Instagram Stories Downloader', 'url' => 'instagramstoriesdownloader'] 
 			],
-			'response' => $this->http_request('https://rest.farzain.com/api/'. $endpoint .'?id='. $id . '&apikey='. $apiKey)
+			'response' => $this->guzzleRequest($endPoint)
 		];
 		$this->load->view('templates/header',$data);
 		$this->load->view('instagram/'. $viewUrl, $data);
@@ -33,17 +40,17 @@ class Instagram extends CI_Controller {
 
 	public function index()
 	{
-		$this->getApi('Instagram Photos Downloader', 'index');
+		$this->getResponse('Instagram Photos Downloader', 'index');
 	}
 	
 	public function instagramVideoDownloader()
 	{
-		$this->getApi('Instagram Videos Downloader', 'instagramvideodownloader');
+		$this->getResponse('Instagram Videos Downloader', 'instagramvideodownloader');
 	}
 
 	public function instagramStoriesDownloader()
 	{
-		$this->getApi('Instagram Stories Downloader', 'instagramstorydownloader', 'ig_story.php');
+		$this->getResponse('Instagram Stories Downloader', 'instagramstorydownloader', 'ig_story.php');
 	}
 
 }
