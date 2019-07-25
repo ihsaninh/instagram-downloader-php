@@ -1,70 +1,58 @@
-###################
-What is CodeIgniter
-###################
+<h1 align="center">:octocat: Content Instagram Downloader :octocat:</h1>
 
-CodeIgniter is an Application Development Framework - a toolkit - for people
-who build web sites using PHP. Its goal is to enable you to develop projects
-much faster than you could if you were writing code from scratch, by providing
-a rich set of libraries for commonly needed tasks, as well as a simple
-interface and logical structure to access these libraries. CodeIgniter lets
-you creatively focus on your project by minimizing the amount of code needed
-for a given task.
+## Table of Contents
 
-*******************
-Release Information
-*******************
+- [Introduction](#introduction)
+- [Features](#features)
+- [Requirements](#requirements)
+- [Installation](#installation)
+- [Screenshoots](#screenshoot)
 
-This repo contains in-development code for future releases. To download the
-latest stable release please visit the `CodeIgniter Downloads
-<https://codeigniter.com/download>`_ page.
+## Introduction
+Content Instagram Downloader adalah Web Aplikasi untuk mengunduh Instagram Foto, Video maupun Story dengan mudah dan cepat. Pastikan bahwa akun Instagram yang akan diunduh filenya dalam keadaan publik dan tidak private. Aplikasi ini menggunakan API dari situs https://rest.farzain.com/.
 
-**************************
-Changelog and New Features
-**************************
 
-You can find a list of all changes for each release in the `user
-guide change log <https://github.com/bcit-ci/CodeIgniter/blob/develop/user_guide_src/source/changelog.rst>`_.
+## Features
+* Download Foto dari akun Instagram sendiri atau orang lain
+* Download Video dari akun Instagram sendiri atau orang lain
+* Download Story dari akun Instagram sendiri atau orang lain
 
-*******************
-Server Requirements
-*******************
+## Requirement
+* [`XAMPP`](https://www.apachefriends.org/) or other Web Server
 
-PHP version 5.6 or newer is recommended.
+## Installation
 
-It should work on 5.3.7 as well, but we strongly advise you NOT to run
-such old versions of PHP, because of potential security and performance
-issues, as well as missing features.
+1. Clone this repository
+   ```
+   $ git clone https://github.com/ihsaninh/Instagram-Downloader-PHP.git
+   ```
+2. Ekstrak File zip nya
+3. Copy folder ke htdocs
+4. Jalankan di Browser dengan mengetikan localhost/Instagram-Downloader-PHP
 
-************
-Installation
-************
+## Screenshoot
+<div align="center">
+    <img width="200" src="https://github.com/ihsaninh/Interview-App-React-Native/blob/master/screenshoots/REGISTER.png">   
+    <img width="200" src="https://github.com/ihsaninh/Interview-App-React-Native/blob/master/screenshoots/TEXT.png">  
+    <img width="200" src="https://github.com/ihsaninh/Interview-App-React-Native/blob/master/screenshoots/TEXT2.png">    
+    <img width="200" src="https://github.com/ihsaninh/Interview-App-React-Native/blob/master/screenshoots/DASHBOARD.png">   
+    <img width="200" src="https://github.com/ihsaninh/Interview-App-React-Native/blob/master/screenshoots/MULTIPLE-CHOICE.png"> 
+    <img width="200" src="https://github.com/ihsaninh/Interview-App-React-Native/blob/master/screenshoots/MULTIPLE-SELECT.png">
+    <img width="200" src="https://github.com/ihsaninh/Interview-App-React-Native/blob/master/screenshoots/VIDEOCALL.png">
+    <img width="200" src="https://github.com/ihsaninh/Interview-App-React-Native/blob/master/screenshoots/FINISH.png">
+</div>
 
-Please see the `installation section <https://codeigniter.com/user_guide/installation/index.html>`_
-of the CodeIgniter User Guide.
 
-*******
-License
-*******
-
-Please see the `license
-agreement <https://github.com/bcit-ci/CodeIgniter/blob/develop/user_guide_src/source/license.rst>`_.
-
-*********
-Resources
-*********
-
--  `User Guide <https://codeigniter.com/docs>`_
--  `Language File Translations <https://github.com/bcit-ci/codeigniter3-translations>`_
--  `Community Forums <http://forum.codeigniter.com/>`_
--  `Community Wiki <https://github.com/bcit-ci/CodeIgniter/wiki>`_
--  `Community Slack Channel <https://codeigniterchat.slack.com>`_
-
-Report security issues to our `Security Panel <mailto:security@codeigniter.com>`_
-or via our `page on HackerOne <https://hackerone.com/codeigniter>`_, thank you.
-
-***************
-Acknowledgement
-***************
-
-The CodeIgniter team would like to thank EllisLab, all the
-contributors to the CodeIgniter project and you, the CodeIgniter user.
+## Contributors
+<center>
+  <table>
+    <tr>
+      <td align="center">
+        <a href="https://github.com/ihsaninh">
+          <img width="100" src="https://avatars0.githubusercontent.com/u/24758414?s=460&v=4" alt="Ihsan Nurul Habib"><br/>
+          <sub><b>Ihsan Nurul Habib</b></sub>
+        </a>
+      </td>
+    </tr>
+  </table>
+</center>
