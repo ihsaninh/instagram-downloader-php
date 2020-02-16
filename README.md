@@ -6,7 +6,7 @@
 - [Features](#features)
 - [Requirements](#requirements)
 - [Installation](#installation)
-- [Screenshoots](#screenshoot)
+- [Contributors](#contributors)
 
 ## Introduction
 Content Instagram Downloader adalah Web Aplikasi untuk mengunduh Instagram Foto, Video maupun Story dengan mudah dan cepat. Pastikan bahwa akun Instagram yang akan diunduh filenya dalam keadaan publik dan tidak private. Aplikasi ini menggunakan API dari situs https://rest.farzain.com/.
@@ -29,14 +29,6 @@ Content Instagram Downloader adalah Web Aplikasi untuk mengunduh Instagram Foto,
 2. Ekstrak File zip nya
 3. Copy folder ke htdocs
 4. Jalankan di Browser dengan mengetikan localhost/Instagram-Downloader-PHP
-
-## Screenshoot
-<div align="center">
-    <img src="https://github.com/ihsaninh/Instagram-Downloader-PHP/blob/master/PHOTO.png">   
-    <img src="https://github.com/ihsaninh/Instagram-Downloader-PHP/blob/master/VIDEO.png">  
-    <img src="https://github.com/ihsaninh/Instagram-Downloader-PHP/blob/master/STORY.png">    
-</div>
-
 
 ## Contributors
 <center>
